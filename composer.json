@@ -1,0 +1,17 @@
+{
+  "name": "ashterix/control-time",
+  "type": "library",
+  "description": "Time control of the script with the ability to check the intermediate points.",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Alex Maistrenko",
+      "email": "ashterix69@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4"
+  }
+}
