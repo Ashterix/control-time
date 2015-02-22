@@ -193,6 +193,10 @@ class ControlTime {
                 background: #d2d385;
                 cursor: default;
             }
+            .table_log .total_time{
+                text-align: left;
+                padding-left: 20px;
+            }
             .table_log td.time_td{
                 width: 100px;
                 text-align: center;
@@ -227,7 +231,7 @@ class ControlTime {
             }
             ?>
             <tr>
-                <th colspan="4" style="text-align: left;padding-left: 20px;vertical-align: middle">Total time: <?= $totalTime; ?> ms</th>
+                <th class="total_time" colspan="4">Total time: <?= $totalTime; ?> ms</th>
             </tr>
         </table>
         <?
