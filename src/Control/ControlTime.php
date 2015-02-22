@@ -81,15 +81,15 @@ class ControlTime {
         $backtrace = debug_backtrace();
         $backtrace = end($backtrace);
 
-        self::$wayPoints['total_time'] = round(($curTime - self::$timeStart), 3);
+        self::$wayPoints['total_time'] = round(($curTime - self::$timeStart), 3) * 1000;
 
         self::$wayPoints[] = [
             "comment"   => (!empty($comment)) ? $comment : "untitled",
             "file"      => $backtrace['file'],
             "line"      => $backtrace['line'],
             "time"      => $curTime,
-            "from_prev" => round(($curTime - self::$timePrev), 3),
-            "from_start"=> round(($curTime - self::$timeStart), 3)
+            "from_prev" => round(($curTime - self::$timePrev), 3) * 1000,
+            "from_start"=> round(($curTime - self::$timeStart), 3) * 1000
         ];
         self::$timePrev = $curTime;
     }
