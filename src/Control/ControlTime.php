@@ -46,8 +46,7 @@ class ControlTime {
     public static function init()
     {
         if (self::$timeStart > 0){
-            $wayPoints = self::$wayPoints;
-            throw new \Exception("Class " . self::className() ." has already been initiated in " . current($wayPoints)['file'] . " line: " . current($wayPoints)['line']);
+            throw new \Exception("Class " . self::className() ." has already been initiated in " . self::$wayPoints[0]['file'] . " line: " . self::$wayPoints[0]['line']);
         }
 
         self::addWayPoint(self::className() . ' init');
