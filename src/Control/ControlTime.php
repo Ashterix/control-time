@@ -94,6 +94,17 @@ class ControlTime {
     }
 
     /**
+     * Get prev data
+     *
+     * @return mixed
+     */
+    public static function getPrevData()
+    {
+        $wayPoints = self::$wayPoints;
+        return end($wayPoints);
+    }
+
+    /**
      * function getResults()
      * @description get results of control time
      *
